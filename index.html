@@ -1,24 +1,38 @@
 <html lang="en">
+
 <head>
+    <link rel="stylesheet" type="text/js" href="script.js">
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
     <title>Home/Akan</title>
+    <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
+    <link rel="stylesheet" type="texr/css" href="style.css">
+    <script src="script.js"></script>
 </head>
+
 <body>
-    <div class="form">
-        <form action="0" method="POST">
-            <fieldset>
-                <label>Gender:</label>
-               
-                    <input  id="rad1"type="radio" name="radAnswer" value ="male"required/>Female
-                    <input id="rad2"type="radio" name="radAnswer" value ="female" required/>Male<br><br><br>
-                    <label>Day</label><input id="day" style="margin-left:2%;" type="number" placeholder="(1-31)" min="1" max="31" required/>
-                    <label>Month </label><input id="month" type="number" placeholder="(1-12)" min="1" max="12"required/>
-                    <label>Year</label> <input id="year" type="number" placeholder="YYYY" max="2020" required/><br><br>
-                    <button class="submit">SUBMIT</button>                                
-            </fieldset>
-        </form>  
+    <div class="=container">
+        <div class="form">
+            <form action="0" method="POST">
+                <fieldset>
+                    <label>Gender:</label>
+
+                    <input id="rad1" type="radio" name="radAnswer" value="male" required />Female
+                    <input id="rad2" type="radio" name="radAnswer" value="female" required />Male<br><br><br>
+                    <label>Day</label><input id="day" style="margin-left:2%;" type="number" placeholder="(1-31)" min="1"
+                        max="31" required />
+                    <label>Month </label><input id="month" type="number" placeholder="(1-12)" min="1" max="12"
+                        required />
+                    <label>Year</label> <input id="number" type="number" placeholder="YYYY" max="2020" minlength="4"
+                        min="1582" required /><br><br>
+                    <button onclick()="test()" class="submit" id="submit">SUBMIT</button>
+                </fieldset>
+            </form>
+        </div>
+        <div>
+            <p id="display"></p>
+        </div>
     </div>
 </body>
 </html>
