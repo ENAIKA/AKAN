@@ -1,33 +1,74 @@
+// var maleArray = [Kwasi, Kwadwo, Kwabena, Kwaku, Yaw, Kofi, Kwame];//sunday has index 0
 
-//varible declaration
-var day = parseInt((document.getElementById("day").value);
-var month = document.getElementById("month").value;
-var year = document.getElementById("year").value;
+var weekday = function () {
+    var d = new Date();
+    var day = document.getElementById("day").value;
+    var month = document.getElementById("month").value;
+    var year = document.getElementById("year").value;
 
-//validation of year input
-
-function myValidation() {
-    if (!year.checkValidity()) {
-      document.getElementById("display").innerHTML = year.validationMessage;
-    } 
-  } 
-//my arrays
-var female=[ Akosua, Adwoa, Abenaa, Akua, Yaa, Afua, Ama]; //sunday-saturday# sunday has index 0
-var male=[Kwasi, Kwadwo, Kwabena, Kwaku, Yaw, Kofi, Kwame];//sunday has index 0
-/* #formula for finding day
-Day of the week (d) = ( ( (CC/4) -2*CC-1) + ((5*YY/4) ) + ((26*(MM+1)/10)) + DD ) mod 7 
-CC - is the century digits. For example 1989 has CC = 19
-
-YY - is the Year digits (1989 has YY = 89)
-
-MM -  is the Month
-
-DD - is the Day of the month 
-
-mod - is the modulus function ( % )*/ 
+    d.setDate(parseInt(day));
+    d.setMonth(parseInt(month) - 1);
+    d.setFullYear(parseInt(year));
+    return d.getDay();
+i}
+// function centuryFromYear(year) {
+//     var x = Math.floor(year/100) + 1;
+//     return x; 
+// }
 
 
+function akanFemale() {
+    var femaleArray = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]; //sunday-saturday# sunday has index 0
+    var gender = document.getElementById("rad1").value;
+    if (gender === "0") {
+        if (weekday() === 0) {
+            return "Your Akan name is " + femaleArray[0];
+        }
+        else if (weekday() ===1) {
+            return "Your Akan name is " + femaleArray[1];
 
+        } else if (weekday() === 2) {
+            return "Your Akan name is " + femaleArray[2];
+        }
+        else if (weekday() === 3) {
+            return "Your Akan name is " + femaleArray[3];
+        }
+        else if (weekday() === 4) {
+            return "Your Akan name is " + femaleArray[4];
+        }
+        else if (weekday() === 5) {
+            return "Your Akan name is " + femaleArray[5];
+        }
+        else {
+            return "Your Akan name is " + femaleArray[6];
+        }
+        
+    }
+    //else { return "male"; }
+    //     if (check() === 0) {
+    //         return "Your Akan name is "  + femaleArray[0];
+    //     }
+    //     else if (check() = 1) {
+    //         return "Your Akan name is "  + femaleArray[1];
 
+    //     } else if (check() === 2) {
+    //         return "Your Akan name is "  + femaleArray[2];
+    //     }
+    //     else if (check() === 3) {
+    //         return "Your Akan name is "  + femaleArray[3];
+    //     }
+    //     else if (check() === 4) {
+    //         return "Your Akan name is "  + femaleArray[4];
+    //     }
+    //     else if (check() === 5) {
+    //         return "Your Akan name is "  + femaleArray[5];
+    //     }
+    //     else {
+    //         return "Your Akan name is " + femaleArray[6];
+    //     }
+    // }
+}
 
-var weekday=(((cc/4)-2*month-1) +((5*year/4))+((26*(month + 1)/10))+DD)%7;
+function output() {
+    document.getElementById("display").innerHTML = akanFemale();
+}
