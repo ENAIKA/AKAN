@@ -69,11 +69,41 @@ function akanMale() {
 }
 //output function
 function output() {
-    if((document.getElementById("rad1").checked) && (weekday()===0||1||2||3||4||5||6)){
-        document.getElementById("display").innerHTML = akanFemale();
+    var day = parseInt(document.getElementById("day").value);
+    var month = parseInt(document.getElementById("month").value);
+    var year = parseInt(document.getElementById("year").value);
+    if((document.getElementById("rad1").checked) && (isNaN(day) || day< 1 || day > 32)){
+        alert("Please correctly fill day field");
+        document.getElementById("akanForm").reset();
+        return false;
     }
-    else if((document.getElementById("rad2").checked) && (weekday()===0||1||2||3||4||5||6)){
+    else if (isNaN(month) || month< 1 || month > 12){
+        alert("Please correctly fill month field");
+        document.getElementById("akanForm").reset();
+        return false;
+    }
+    else if(isNaN(year) || year< 1582 || year > 2020){
+        alert("Invalid year");
+        document.getElementById("akanForm").reset();
+        return false;
+    }
+    else if((month=2) && day>30) {
+        alert("invalid day for Feburuary")
+        document.getElementById("akanForm").reset();
+        return false;
+    }
+    else if (document.getElementById("rad1").checked){
+        document.getElementById("display").innerHTML = akanFemale();
+        document.getElementById("akanForm").reset();
+        return false;
+    }
+    else if(document.getElementById("rad2").checked){
         document.getElementById("display").innerHTML = akanMale();
+        document.getElementById("akanForm").reset();
+        return false;
+    }else{
+        alert("all fields must be filled")
+        return false;
     }
     
 }
