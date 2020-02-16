@@ -1,9 +1,9 @@
 # Akan Name
-* Akan names are derived from Ghanian culture. Frequently in children Ghana,  are given their first name as a day-name which corresponds to the day in the week they were born and  gender.
 #### Akan name website, 14/02/2020
 #### By [E Naika](https://github.com/ENAIKA)
 ## Description
-* This is a website showing Akan names on input of birthday 
+* This is a website showing Akan names on input of birthday.
+* Akan names are derived from Ghanian culture. Frequently children in Ghana,  are given their first name as a day-name which is depended on gender and corresponds to the day in the week they were born. 
 ## Setup/Installation Requirements
 * To run the website need a browser (IE version 9 and above)
 #### To Contribute
@@ -20,7 +20,7 @@ Follow this steps:
 * Custom-made CSS for styling.
 * JS calculating the weekday and output the Akan name.
 #URL
-https://enaika.github.io/Akan/
+* https://enaika.github.io/Akan/
 
 ### License
 * MIT License
