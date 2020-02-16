@@ -3,9 +3,9 @@
 #### By [E Naika](https://github.com/ENAIKA)
 ## Description
 * This is a website showing Akan names on input of birthday.
-* Akan names are derived from Ghanian culture. Frequently children in Ghana,  are given their first name as a day-name which is depended on gender and corresponds to the day in the week they were born. 
+* Akan names are derived from Ghanaian culture. Frequently children in Ghana,  are given their first name as a day-name which is depended on gender and corresponds to the day in the week they were born. 
 ## Setup/Installation Requirements
-* To run the website need a browser (IE version 9 and above)
+* To run the website need a browser (for IE browsers version 9 and above is recommended.)
 #### To Contribute
 Follow this steps:
 * Fork the repo
@@ -15,11 +15,28 @@ Follow this steps:
 * Commit your changes 
 * Push to the branch 
 * Create a Pull Request.
+
+# Behaviour Driven Design
+* Akan calculator should output Akan names based on user birthday and gender inputs.
+### Specifications
+| Behaviour                | Input example           | Output Example                   |
+| ---------------------------|:-----------------------:| --------------------------------:|
+| An empty form              | No input and user hits submit| false/alert the form be filled|
+| Not all fields filled      | Some fields not filled | false/alert the form be filled   | 
+| Leap year-dully filled form| month is Feb & date = 29| True/Output Akan name            |
+| Unchecked radio button | failed to check either of the radio buttons| false/alert the form be fully filled|
+|Not leap year-dully filled form| month is Feb & date = 28| True/Output Akan name|
+|Not leap year-dully filled form| any month except Feb and day=30| True/Output Akan name|
+|Not leap year-dully filled form| month is 2,4,6,9,11 & date >31| false/alert invalid input|
+
+* create user interface.
+* Integrate the frontend and backend by linking the stylesheet and javascipt files to html file
 ## Technologies Used
 * HTML for page layouts
-* Custom-made CSS for styling.
+* Bootstrap and Custom-made CSS for styling.
 * JS calculating the weekday and output the Akan name.
-#URL
+
+# URL
 * https://enaika.github.io/Akan/
 
 ### License
