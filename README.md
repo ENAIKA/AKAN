@@ -37,7 +37,7 @@ Follow this steps:
 * JS calculating the weekday and output the Akan name.
 
 # URL
-* https://enaika.github.io/Akan/
+* https://enaika.github.io/AKAN/
 
 ### License
 * MIT License
