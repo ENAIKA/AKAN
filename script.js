@@ -18,29 +18,29 @@ var weekday = function () {
 
 function akanFemale() {
     var femaleArray = ["Akosua", "Adwoa", "Abenaa", "Akua", "Yaa", "Afua", "Ama"]; //sunday-saturday# sunday has index 0
-        if (weekday() === 0) {
-            return "Your Akan name is " + femaleArray[0];
-        }
-        else if (weekday() === 1) {
-            return "Your Akan name is " + femaleArray[1];
+    if (weekday() === 0) {
+        return "Your Akan name is " + femaleArray[0];
+    }
+    else if (weekday() === 1) {
+        return "Your Akan name is " + femaleArray[1];
 
-        } else if (weekday() === 2) {
-            return "Your Akan name is " + femaleArray[2];
-        }
-        else if (weekday() === 3) {
-            return "Your Akan name is " + femaleArray[3];
-        }
-        else if (weekday() === 4) {
-            return "Your Akan name is " + femaleArray[4];
-        }
-        else if (weekday() === 5) {
-            return "Your Akan name is " + femaleArray[5];
-        }
-        else {
-            return "Your Akan name is " + femaleArray[6];
-        }
+    } else if (weekday() === 2) {
+        return "Your Akan name is " + femaleArray[2];
+    }
+    else if (weekday() === 3) {
+        return "Your Akan name is " + femaleArray[3];
+    }
+    else if (weekday() === 4) {
+        return "Your Akan name is " + femaleArray[4];
+    }
+    else if (weekday() === 5) {
+        return "Your Akan name is " + femaleArray[5];
+    }
+    else {
+        return "Your Akan name is " + femaleArray[6];
+    }
 
-    }  
+}
 
 
 function akanMale() {
@@ -72,38 +72,42 @@ function output() {
     var day = parseInt(document.getElementById("day").value);
     var month = parseInt(document.getElementById("month").value);
     var year = parseInt(document.getElementById("year").value);
-    if((document.getElementById("rad1").checked) && (isNaN(day) || day< 1 || day > 32)){
+    if ((document.getElementById("rad1").checked) && (isNaN(day) || day < 1 || day > 32)) {
         alert("Please correctly fill day field");
-        document.getElementById("akanForm").reset();
+        document.getElementById("day").reset();
         return false;
     }
-    else if (isNaN(month) || month< 1 || month > 12){
+    else if (isNaN(month) || month < 1 || month > 12 ||month===null ) {
         alert("Please correctly fill month field");
-        document.getElementById("akanForm").reset();
         return false;
     }
-    else if(isNaN(year) || year< 1582 || year > 2020){
+    else if((document.getElementById("month")==2)&& (document.getElementById("day")>30)){
+        alert("Please ttcu invalid day for Feburuary");
+    }
+    else if (isNaN(year) || year < 1582 || year > 2020) {
         alert("Invalid year");
-        document.getElementById("akanForm").reset();
-        return false;
     }
-    else if((month=2) && day>30) {
-        alert("invalid day for Feburuary")
-        document.getElementById("akanForm").reset();
-        return false;
+    else if (((document.getElementById("rad1").checked) || (document.getElementById("rad2").checked)) &&((month ===2) && day > 30)) {
+        alert("invalid day for Feburuary");
+        // document.getElementById("akanForm").reset();
+
     }
-    else if (document.getElementById("rad1").checked){
+    else if ((document.getElementById("rad2").checked)&&((month == 2) && day > 30)) {
+        alert("invalid day for Feburuary");
+        // document.getElementById("akanForm").reset();
+    }
+    else if (document.getElementById("rad1").checked) {
         document.getElementById("display").innerHTML = akanFemale();
         document.getElementById("akanForm").reset();
-        return false;
+
     }
-    else if(document.getElementById("rad2").checked){
+    else if (document.getElementById("rad2").checked) {
         document.getElementById("display").innerHTML = akanMale();
         document.getElementById("akanForm").reset();
-        return false;
-    }else{
+
+    } else {
         alert("all fields must be filled")
-        return false;
+        return false;//prevent refresh
     }
-    
+
 }

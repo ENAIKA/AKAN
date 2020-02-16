@@ -1,7 +1,82 @@
-.form{
-    width: 50%;
-    background-color: blue;
+.container .formdiv{
+    
+    background-color:cyan;
+    
 }
-.submit{
-    margin-left: 50%;
+.container .formdiv #btnsubmit{
+    margin-left: 25%;
 }
+#day:valid,#month:valid, #year:valid{
+    color:green;
+}
+#day:invalid,#month:invalid, #year:invalid{
+    color: red;
+}
+.jumbotron{
+    text-align: center;
+}
+.jumbotron h1{
+    font-family: 'Modak', cursive;
+    color:green;
+}
+body{
+    background-color: lightgreen;
+    font-family: "Roboto",sans-serif;
+    font-weight: 300;
+    text-size-adjust: 100%;
+}
+.img {
+   height: 50%;
+   width: 100%;
+}
+.centered {
+    position: absolute;
+    top: 60%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background-color: white;
+  }
+.centered a{
+    animation:blinkingText 1.4s infinite;
+    animation-delay: 2s;
+}
+.arrow{
+    position: absolute;
+    top: 80%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+}
+
+@keyframes blinkingText{
+    0%{     color: #000; }
+    49%{    color: #000; }
+    60%{    color: transparent; }
+    99%{    color: transparent;  }
+    100%{   color: #000;    }
+}
+.top {
+    position: relative;
+    display: inline-block;
+  }
+  
+  /* Tooltip text */
+  .top .tooltiptext {
+    visibility: hidden;
+    width: 120px;
+    background-color: green;
+    color: #fff;
+    text-align: center;
+    padding: 5px 0;
+    border-radius: 6px;  
+    position: absolute; /* Position the tooltip text */
+    z-index: 1;
+  }
+  /* Show the tooltip on hover */
+  .top:hover .tooltiptext {
+    visibility: visible;
+  }
+/* .jumbotron:hover{
+    transform: rotateZ(360deg);
+  } */
+  /*font-family: 'Sriracha', cursive;
+  font-family: 'Lacquer', sans-serif;*/
