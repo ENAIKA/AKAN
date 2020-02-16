@@ -1,3 +1,33 @@
+/* place the navbar at the top*/
+#nav{
+    display: block;
+    margin: 0;
+    top: 0;
+    left: 0;
+    width:100%;
+    line-height:20px;
+    font-size: xx-large;
+    color:white;
+    overflow: hidden;
+    background-color: gray;
+}
+/*style the nav a links*/
+#nav a{
+   
+    overflow: hidden;
+    float:left;
+    color: inherit;
+    text-decoration: none;/*removes the underline feature on the links*/
+    width: 120px;
+    padding: 16px 10px;
+    font-family: 'Satisfy', cursive;
+}
+/*style the nav links on hover*/
+#nav a:hover{
+    color: black;
+    background-color: azure;
+    border-bottom: 3px solid red;
+}
 .container .formdiv{
     
     background-color:cyan;
