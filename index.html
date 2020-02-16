@@ -15,7 +15,16 @@
 </head>
 
 <body>
+    <div class="nav">
+        <nav id="nav">
+            <a href="#">Home</a>
+            <a href="#akanForm">Akan calc</a>
+            <a href="#top">Contacts</a>
+        </nav>
+    </div>
+    
     <div class="jumbotron">
+        
         <h1>AKAN NAME</h1>
         <h4>Akan naming is a Ghana culture where one is given a name according to the weekday born and gender.</h4>
         <div class=container>
@@ -46,7 +55,7 @@
                                     <label>Gender:</label>
                                     <input id="rad1" type="radio" name="radAnswer" value="0" required /> Female<br>
                                     <input id="rad2" type="radio" name="radAnswer" value="1" style="margin-left: 20%;"
-                                        required />
+                                     required />
                                     Male<br><br><br>
                                     <label>Day</label><input id="day" type="number" placeholder="DD" min="1" max="31"
                                         class="form-control" required />
@@ -54,6 +63,7 @@
                                         min="1" max="12" class="form-control" required />
                                     <label>Year</label> <input id="year" type="number" placeholder="YYYY" max="2020"
                                         minlength="4" min="1582" class="form-control" required /> <br><br>
+                                    <p class="text-danger" id="badinput"></p>
 
                                 </fieldset>
                             </form>
@@ -64,22 +74,37 @@
                 </div>
             </div>
             <div class="col-md-3">
-                <div>
+                <div class="alert-info">
                     <p id="display">hdwihsid</p>
                 </div>
             </div>
         </div>
 
-        <footer>
-            <div class="top">
-                <div id="top">
-                    <a href="#"><img src="./images/arrow_upward-24px.svg" alt="upward arrow image"
-                            style="width: 35px;"></a>
-                    <span class="tooltiptext">Back to Top</span>
+        <footer class="footer">
+            <div class="row bg-primary">
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+
+                </div>
+                <div class="col-md-3">
+                    <div class="top">
+                        <div id="top">
+                            <a href="#"><img src="./images/arrow_upward-24px.svg" alt="upward arrow image"
+                                    style="width: 35px;"></a>
+                            <span class="tooltiptext">Back to Top</span>
+                        </div>
+                    </div>
                 </div>
             </div>
+            
+            
             <div class="footer-copyright text-center py-3">&copy 2020 Copyright:
-                <a href="https://enaika.github.io/Portfolio/"> E Naika</a>
+                <a href="https://enaika.github.io/Akan/"> E Naika</a>
             </div>
         </footer>
     </div>
