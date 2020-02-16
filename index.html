@@ -1,3 +1,4 @@
+<!doctype html>
 <html lang="en">
 
 <head>
@@ -5,34 +6,83 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Home/Akan</title>
+    <title>Home/Akan-Names</title>
     <link rel="stylesheet" type="text/css" href="css/bootstrap.css">
-    <link rel="stylesheet" type="texr/css" href="style.css">
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Lacquer|Modak|Sriracha&display=swap" rel="stylesheet">
+    <!--GoogleFonts-->
     <script src="script.js"></script>
 </head>
 
 <body>
-    <div class="=container">
-        <div class="form">
-            <form action="0" method="POST">
-                <fieldset>
-                    <label>Gender:</label>
+    <div class="jumbotron">
+        <h1>AKAN NAME</h1>
+        <h4>Akan naming is a Ghana culture where one is given a name according to the weekday born and gender.</h4>
+        <div class=container>
+        <img src="./images/ocean2.jpg" class="img-responsive" style="width: 100%;" height="590">
+        <div class="centered">
+            <a href="#akanForm">
+                <h3>Click to know your Akan Name</h3>
+            </a>
+        </div>
+        <div class="arrow">
+            <a href="#akanForm"> <img src="./images/arrow_downward-24px.svg" alt="arrow downward image"
+                    style="width: 35px; height: 40px;"></a>
+        </div></div>
+    </div>
+    <div class="container">
+        <div class="row">
+            <div class="col-md-5">
+                <img src="./images/ghanaflag.png" alt="ghana flag image" style="width: 100%; height: 50%;">
+                <img src="./images/ghana2.jpg" alt="ghana culture image" style="width: 100%; height: 50%;">
+            </div>
+            <div class="col-md-4">
+                <div class="formdiv">
+                    <div class="card">
+                        <div class="card-header text-success">Enter the fields to know your Akan name</div>
+                        <div class="card-body">
+                            <form action="" method="POST" id="akanForm">
+                                <fieldset>
+                                    <label>Gender:</label>
+                                    <input id="rad1" type="radio" name="radAnswer" value="0" required /> Female<br>
+                                    <input id="rad2" type="radio" name="radAnswer" value="1" style="margin-left: 20%;"
+                                        required />
+                                    Male<br><br><br>
+                                    <label>Day</label><input id="day" type="number" placeholder="DD" min="1" max="31"
+                                        class="form-control" required />
+                                    <label for="month">Month </label><input id="month" type="number" placeholder="MM"
+                                        min="1" max="12" class="form-control" required />
+                                    <label>Year</label> <input id="year" type="number" placeholder="YYYY" max="2020"
+                                        minlength="4" min="1582" class="form-control" required /> <br><br>
 
-                    <input id="rad1" type="radio" name="radAnswer" value="male" required />Female
-                    <input id="rad2" type="radio" name="radAnswer" value="female" required />Male<br><br><br>
-                    <label>Day</label><input id="day" style="margin-left:2%;" type="number" placeholder="(1-31)" min="1"
-                        max="31" required />
-                    <label>Month </label><input id="month" type="number" placeholder="(1-12)" min="1" max="12"
-                        required />
-                    <label>Year</label> <input id="number" type="number" placeholder="YYYY" max="2020" minlength="4"
-                        min="1582" required /><br><br>
-                    <button onclick()="test()" class="submit" id="submit">SUBMIT</button>
-                </fieldset>
-            </form>
+                                </fieldset>
+                            </form>
+                        </div>
+                        <div class="card-footer"><button onclick="output()" class="btn btn-primary" id="btnsubmit"
+                                type="button">SUBMIT</button></div>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-3">
+                <div>
+                    <p id="display">hdwihsid</p>
+                </div>
+            </div>
         </div>
-        <div>
-            <p id="display"></p>
-        </div>
+
+        <footer>
+            <div class="top">
+                <div id="top">
+                    <a href="#"><img src="./images/arrow_upward-24px.svg" alt="upward arrow image"
+                            style="width: 35px;"></a>
+                    <span class="tooltiptext">Back to Top</span>
+                </div>
+            </div>
+            <div class="footer-copyright text-center py-3">&copy 2020 Copyright:
+                <a href="https://enaika.github.io/Portfolio/"> E Naika</a>
+            </div>
+        </footer>
     </div>
 </body>
+
 </html>
